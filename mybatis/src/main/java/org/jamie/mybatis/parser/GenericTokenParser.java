@@ -1,6 +1,6 @@
 package org.jamie.mybatis.parser;
 
-import org.jamie.mybatis.handler.TokenHandler;
+import org.jamie.mybatis.handler.token.TokenHandler;
 
 /**
  * @author Clinton Begin

@@ -1,6 +1,6 @@
-package org.jamie.mybatis.handler.impl;
+package org.jamie.mybatis.handler.type.impl;
 
-import org.jamie.mybatis.handler.TypeHandler;
+import org.jamie.mybatis.handler.type.TypeHandler;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

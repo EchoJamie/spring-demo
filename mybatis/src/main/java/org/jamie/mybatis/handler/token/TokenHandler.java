@@ -1,4 +1,4 @@
-package org.jamie.mybatis.handler;
+package org.jamie.mybatis.handler.token;
 
 /**
  * @author Clinton Begin

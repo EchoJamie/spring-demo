@@ -1,6 +1,5 @@
-package org.jamie.mybatis.handler.impl;
+package org.jamie.mybatis.handler.token;
 
-import org.jamie.mybatis.handler.TokenHandler;
 import org.jamie.mybatis.parser.ParameterMapping;
 
 import java.util.ArrayList;

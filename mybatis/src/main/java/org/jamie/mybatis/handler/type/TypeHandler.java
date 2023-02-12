@@ -1,4 +1,4 @@
-package org.jamie.mybatis.handler;
+package org.jamie.mybatis.handler.type;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
