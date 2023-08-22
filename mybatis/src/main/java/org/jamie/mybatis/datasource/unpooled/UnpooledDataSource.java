@@ -52,6 +52,36 @@ public class UnpooledDataSource implements DataSource {
      */
     private Integer defaultTransactionIsolationLevel;
 
+    public UnpooledDataSource() {
+    }
+
+    public UnpooledDataSource(String driver, String url, String username, String password) {
+        this.driver = driver;
+        this.url = url;
+        this.username = username;
+        this.password = password;
+    }
+    public UnpooledDataSource(String driver, String url, Properties driverProperties) {
+        this.driver = driver;
+        this.url = url;
+        this.driverProperties = driverProperties;
+    }
+
+    public UnpooledDataSource(ClassLoader driverClassLoader, String driver, String url, String username, String password) {
+        this.driverClassLoader = driverClassLoader;
+        this.driver = driver;
+        this.url = url;
+        this.username = username;
+        this.password = password;
+    }
+
+    public UnpooledDataSource(ClassLoader driverClassLoader, String driver, String url, Properties driverProperties) {
+        this.driverClassLoader = driverClassLoader;
+        this.driver = driver;
+        this.url = url;
+        this.driverProperties = driverProperties;
+    }
+
 
     @Override
     public Connection getConnection() throws SQLException {

@@ -4,12 +4,7 @@ import org.jamie.mybatis.datasource.DataSourceFactory;
 import org.jamie.mybatis.reflection.MetaJavaObject;
 
 import javax.sql.DataSource;
-import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.sql.SQLFeatureNotSupportedException;
 import java.util.Properties;
-import java.util.logging.Logger;
 
 /**
  * @author EchoJamie
