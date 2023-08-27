@@ -1,4 +1,4 @@
-package com.jamie.pool.datasource;
+package org.jamie.pool.datasource;
 
 import javax.sql.DataSource;
 import java.io.PrintWriter;

@@ -1,6 +1,6 @@
-package com.jamie.pool.datasource;
+package org.jamie.pool.datasource;
 
-import com.jamie.pool.proxy.ConnectionProxy;
+import org.jamie.pool.proxy.ConnectionProxy;
 
 import java.sql.Connection;
 import java.sql.SQLException;

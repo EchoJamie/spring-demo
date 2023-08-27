@@ -1,4 +1,4 @@
-package com.jamie.pool.datasource;
+package org.jamie.pool.datasource;
 
 import lombok.Getter;
 import lombok.Setter;

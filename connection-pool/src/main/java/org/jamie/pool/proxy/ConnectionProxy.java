@@ -1,6 +1,6 @@
-package com.jamie.pool.proxy;
+package org.jamie.pool.proxy;
 
-import com.jamie.pool.datasource.PooledJamieDatasourceImpl;
+import org.jamie.pool.datasource.PooledJamieDatasourceImpl;
 import lombok.Getter;
 import lombok.Setter;
 
