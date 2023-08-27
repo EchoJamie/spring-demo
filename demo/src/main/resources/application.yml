@@ -1,0 +1,35 @@
+demo:
+  test: ${abind}
+
+management:
+  health:
+    rabbit:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+server:
+  port: 8889
+
+spring:
+  cloud:
+    config:
+      enabled: false
+  rabbitmq:
+    #链接主机
+    host: 172.16.0.198
+    #端口
+    port: 5672
+    #已经授权的用户账号密码
+    username: guest
+    password: guest
+    #指定的虚拟主机. 默认/,
+    virtual-host: demo
+
+test:
+  - q1
+  - w2
+  - e3
+
+abc: aaa

@@ -1,0 +1,19 @@
+pluginManagement {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven { url 'https://repo.spring.io/milestone' }
+        gradlePluginPortal()
+    }
+
+}
+rootProject.name='spring-demo'
+include(':connection-pool')
+include(':demo')
+include(':dubbo')
+//include(':lombok')
+include(':security-demo')
+include(':mybatis')
+include(':spring')
+include(':springboot')
+include(':springboot-demo')

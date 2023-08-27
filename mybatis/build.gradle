@@ -1,0 +1,23 @@
+group='org.jamie.mybatis'
+version='1.0-SNAPSHOT'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+configurations {
+    compileJava {
+        extendsFrom annotationProcessor
+    }
+}
+
+dependencies {
+    runtimeOnly "mysql:mysql-connector-java:$MYSQL_VERSION"
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+    testImplementation 'junit:junit:4.12'
+    testAnnotationProcessor 'junit:junit:4.12'
+    testCompileOnly 'org.projectlombok:lombok:1.18.24'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.24'
+}

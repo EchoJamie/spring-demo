@@ -1,0 +1,32 @@
+plugins {
+    id 'maven-publish'
+    id 'java-library'
+}
+
+group='org.jamie.springboot'
+version='1.0-SNAPSHOT'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+ext {
+    springVersion='5.3.18'
+}
+
+
+dependencies {
+    api "org.springframework:spring-context:$springVersion"
+    api "org.springframework:spring-web:$springVersion"
+    api "org.springframework:spring-webmvc:$springVersion"
+    api "org.springframework:spring-aop:$springVersion"
+    compileOnly "javax.servlet:javax.servlet-api:$SERVLET_VERSION"
+    api "org.apache.tomcat.embed:tomcat-embed-core:$TOMCAT_VERSION"
+    compileOnly "org.eclipse.jetty:jetty-server:$JETTY_VERSION"
+
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+
+    testImplementation 'junit:junit:4.12'
+}
