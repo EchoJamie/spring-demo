@@ -16,6 +16,7 @@ public @interface Component {
 
     /**
      * BeanName
+     *
      * @return BeanName
      */
     String value();

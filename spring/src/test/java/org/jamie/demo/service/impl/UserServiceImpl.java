@@ -7,7 +7,9 @@ import org.jamie.spring.bean.BeanNameAware;
 import org.jamie.spring.bean.InitializingBean;
 import org.jamie.spring.bean.annotation.Autowired;
 import org.jamie.spring.bean.annotation.Scope;
-import org.jamie.spring.bean.constant.ScopeConstant;
+
+import static org.jamie.spring.bean.config.ConfigurableBeanFactory.SCOPE_PROTOTYPE;
+import static org.jamie.spring.bean.config.ConfigurableBeanFactory.SCOPE_SINGLETON;
 
 /**
  * @author jamie
@@ -16,11 +18,13 @@ import org.jamie.spring.bean.constant.ScopeConstant;
  * @date 2022/12/29 22:54
  */
 @Component("userService")
-@Scope(ScopeConstant.PROTOTYPE)
+// @Scope(SCOPE_PROTOTYPE)
+@Scope
 public class UserServiceImpl implements BeanNameAware, InitializingBean, UserService {
 
     @Autowired
     private OrderService orderService;
+    private String xmlProperty;
 
     private String beanName;
 
@@ -28,10 +32,11 @@ public class UserServiceImpl implements BeanNameAware, InitializingBean, UserSer
 
     @Override
     public void test() {
-        System.out.println("this" + this);
-        System.out.println("beanName" + beanName);
-        System.out.println("orderService" + orderService);
+        System.out.println("this: " + this);
+        System.out.println("beanName: " + beanName);
+        System.out.println("orderService: " + orderService);
         System.out.println("initStr: " + initStr);
+        System.out.println("xmlProperty: " + xmlProperty);
     }
 
     public void setInitStr(String initStr) {
@@ -46,5 +51,17 @@ public class UserServiceImpl implements BeanNameAware, InitializingBean, UserSer
     @Override
     public void afterPropertiesSet() throws Exception {
         System.out.println("初始化....");
+    }
+
+    public void setOrderService(OrderService orderService) {
+        this.orderService = orderService;
+    }
+
+    public OrderService getOrderService() {
+        return orderService;
+    }
+
+    public void setXmlProperty(String xmlProperty) {
+        this.xmlProperty = xmlProperty;
     }
 }

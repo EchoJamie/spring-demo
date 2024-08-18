@@ -1,4 +1,4 @@
-package org.jamie.spring.bean.exception;
+package org.jamie.spring.exception;
 
 /**
  * @author jamie
@@ -6,7 +6,7 @@ package org.jamie.spring.bean.exception;
  * @description Bean未找到 异常
  * @date 2022/12/30 00:04
  */
-public class BeanNotFoundException extends BeanException{
+public class BeanNotFoundException extends BeanException {
 
 
     public BeanNotFoundException(String message, Object... args) {

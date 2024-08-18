@@ -1,4 +1,4 @@
-package org.jamie.spring.bean.exception;
+package org.jamie.spring.exception;
 
 /**
  * @author jamie
@@ -6,7 +6,7 @@ package org.jamie.spring.bean.exception;
  * @description Bean异常类
  * @date 2022/12/30 14:58
  */
-public class BeanException extends RuntimeException{
+public class BeanException extends RuntimeException {
 
     public BeanException() {
     }

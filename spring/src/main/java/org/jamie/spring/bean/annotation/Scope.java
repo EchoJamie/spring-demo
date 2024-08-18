@@ -1,8 +1,8 @@
 package org.jamie.spring.bean.annotation;
 
-import org.jamie.spring.bean.constant.ScopeConstant;
-
 import java.lang.annotation.*;
+
+import static org.jamie.spring.bean.config.ConfigurableBeanFactory.SCOPE_SINGLETON;
 
 /**
  * @author jamie
@@ -15,5 +15,5 @@ import java.lang.annotation.*;
 @Documented
 public @interface Scope {
 
-    ScopeConstant value() default ScopeConstant.SINGLETON;
+    String value() default SCOPE_SINGLETON;
 }

@@ -1,6 +1,10 @@
 package org.jamie.spring.bean;
 
-import org.jamie.spring.bean.constant.ScopeConstant;
+import lombok.Getter;
+import lombok.Setter;
+import org.jamie.spring.env.PropertyValues;
+
+import static org.jamie.spring.bean.config.ConfigurableBeanFactory.SCOPE_SINGLETON;
 
 /**
  * @author jamie
@@ -10,22 +14,39 @@ import org.jamie.spring.bean.constant.ScopeConstant;
  */
 public class BeanDefinition {
 
+    @Setter
+    @Getter
     private Class clazz;
-    private ScopeConstant scope;
+    @Setter
+    @Getter
+    private String scope;
 
-    public Class getClazz() {
-        return clazz;
+    @Setter
+    @Getter
+    private PropertyValues propertyValues;
+
+    @Setter
+    @Getter
+    private String initMethodName;
+
+    @Setter
+    @Getter
+    private String destroyMethodName;
+
+    @Setter
+    @Getter
+    private boolean lazyInit;
+
+    public BeanDefinition(Class clazz) {
+        this(clazz, null);
     }
 
-    public void setClazz(Class clazz) {
+    public BeanDefinition(Class clazz, PropertyValues propertyValues) {
         this.clazz = clazz;
+        this.propertyValues = propertyValues != null ? propertyValues : new PropertyValues();
     }
 
-    public ScopeConstant getScope() {
-        return scope;
-    }
-
-    public void setScope(ScopeConstant scope) {
-        this.scope = scope;
+    public boolean isSingleton() {
+        return SCOPE_SINGLETON.equals(scope);
     }
 }

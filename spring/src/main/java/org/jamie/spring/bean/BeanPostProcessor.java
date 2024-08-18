@@ -10,6 +10,7 @@ public interface BeanPostProcessor {
 
     /**
      * 初始化前
+     *
      * @param bean
      * @param beanName
      * @return
@@ -20,6 +21,7 @@ public interface BeanPostProcessor {
 
     /**
      * 初始化后
+     *
      * @param bean
      * @param beanName
      * @return
