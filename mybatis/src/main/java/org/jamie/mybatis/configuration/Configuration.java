@@ -28,7 +28,7 @@ public interface Configuration {
 
     void setProperties(Properties properties);
 
-    void registryMapper(Class mapperInterface);
+    void registryMapper(Class<?> mapperInterface);
 
     public default Configuration getConfiguration() {
         return this;
