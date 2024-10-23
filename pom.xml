@@ -17,6 +17,7 @@
         <module>dubbo</module>
         <module>security-demo</module>
         <module>connection-pool</module>
+        <module>registry</module>
         <module>rpc</module>
     </modules>
 
